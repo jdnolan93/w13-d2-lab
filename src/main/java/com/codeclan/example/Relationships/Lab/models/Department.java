@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="deparments")
+@Table(name="departments")
 public class Department {
 
     @Id
@@ -21,7 +21,7 @@ public class Department {
     @OneToMany(mappedBy = "department")
     private List<Employee> employees;
 
-    public Department(String name, List<Employee> employees) {
+    public Department(String name) {
         this.name = name;
         this.employees = new ArrayList<>();
     }
