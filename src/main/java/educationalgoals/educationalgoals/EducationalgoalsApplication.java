@@ -1,0 +1,13 @@
+package educationalgoals.educationalgoals;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EducationalgoalsApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EducationalgoalsApplication.class, args);
+	}
+
+}
