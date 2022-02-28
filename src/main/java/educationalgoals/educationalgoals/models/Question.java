@@ -20,12 +20,20 @@ public class Question {
     @JsonIgnoreProperties({"question"})
     private List<Answer> answers;
 
+    @OneToOne(mappedBy = "question", fetch = FetchType.LAZY)
+    @JsonIgnoreProperties({"question"})
     private Answer correctAnswer;
 
-    public Question(String ask, List<Answer> answers, Answer correctAnswer) {
+    @ManyToOne
+    @JoinColumn(name = "quiz_id", nullable = false)
+    @JsonIgnoreProperties({"questions"})
+    private Quiz quiz;
+
+    public Question(String ask, List<Answer> answers, Answer correctAnswer, Quiz quiz) {
         this.ask = ask;
         this.answers = answers;
         this.correctAnswer = correctAnswer;
+        this.quiz = quiz;
     }
 
     public Question() {
@@ -61,6 +69,14 @@ public class Question {
 
     public void setCorrectAnswer(Answer correctAnswer) {
         this.correctAnswer = correctAnswer;
+    }
+
+    public Quiz getQuiz() {
+        return quiz;
+    }
+
+    public void setQuiz(Quiz quiz) {
+        this.quiz = quiz;
     }
 
     public void addAnswer(Answer answer){

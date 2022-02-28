@@ -17,6 +17,7 @@ public class Quiz {
     @JsonIgnoreProperties({"quiz"})
     private List<Question> questions;
 
+
     public Quiz(List<Question> questions) {
         this.questions = questions;
     }
