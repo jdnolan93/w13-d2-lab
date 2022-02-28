@@ -51,4 +51,12 @@ public class Question {
     public void setAnswers(List<Answer> answers) {
         this.answers = answers;
     }
+
+    public void addAnswer(Answer answer){
+        this.answers.add(answer);
+    }
+
+    public void removeAnswer(Answer answer){
+        this.answers.remove(answer);
+    }
 }
