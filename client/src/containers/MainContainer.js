@@ -16,7 +16,7 @@ const MainContainer = () => {
         <Routes>
             <Route path = "/start" element={<StartContainer playerOne = {playerOne} playerTwo = {playerTwo} setPlayerOne = {setPlayerOne} setPlayerTwo = {setPlayerTwo}/>}/>
             <Route path = "/quiz" element={<QuizContainer playerOne = {playerOne} playerTwo = {playerTwo}/>}/>
-            <Route path = "/game" element={<GameContainer/>}/>
+            <Route path = "/game" element={<GameContainer playerOne = {playerOne} playerTwo = {playerTwo}/>}/>
         </Routes>
     </Router>
 
