@@ -1,11 +1,9 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 
 
 
 const StartContainer = ({playerOne, playerTwo, setPlayerOne, setPlayerTwo}) => {
-    
-    // const [playerOne, setPlayerOne] = useState("Player 1");
-    // const [playerTwo, setPlayerTwo] = useState("Player 2");
     
     const handleChangePlayerOne = (event) => {
 
@@ -25,7 +23,7 @@ const StartContainer = ({playerOne, playerTwo, setPlayerOne, setPlayerTwo}) => {
         <h1>Educational Goals</h1>
         <input type = "text" onChange={handleChangePlayerOne} id = "Player 1 input" />  
         <input type = "text" onChange={handleChangePlayerTwo} id = "Player 2 input"/> 
-        <a href = "/quiz">Start</a> 
+        <Link to = "/quiz">Start</Link>
         </>
     
     )
