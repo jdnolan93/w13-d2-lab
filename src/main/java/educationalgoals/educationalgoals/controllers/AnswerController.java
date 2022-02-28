@@ -1,4 +1,4 @@
 package educationalgoals.educationalgoals.controllers;
 
-public class OptionController {
+public class AnswerController {
 }

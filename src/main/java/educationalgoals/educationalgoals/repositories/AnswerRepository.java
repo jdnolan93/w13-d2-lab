@@ -1,4 +1,4 @@
 package educationalgoals.educationalgoals.repositories;
 
-public interface OptionRepository {
+public interface AnswerRepository {
 }
