@@ -20,9 +20,12 @@ public class Question {
     @JsonIgnoreProperties({"question"})
     private List<Answer> answers;
 
-    public Question(String ask, List<Answer> answers) {
+    private Answer correctAnswer;
+
+    public Question(String ask, List<Answer> answers, Answer correctAnswer) {
         this.ask = ask;
         this.answers = answers;
+        this.correctAnswer = correctAnswer;
     }
 
     public Question() {
@@ -50,6 +53,14 @@ public class Question {
 
     public void setAnswers(List<Answer> answers) {
         this.answers = answers;
+    }
+
+    public Answer getCorrectAnswer() {
+        return correctAnswer;
+    }
+
+    public void setCorrectAnswer(Answer correctAnswer) {
+        this.correctAnswer = correctAnswer;
     }
 
     public void addAnswer(Answer answer){
