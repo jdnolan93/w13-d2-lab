@@ -26,7 +26,7 @@ public class AnswerController {
     }
 
     @PostMapping(value = "/answers")
-    public ResponseEntity<Answer> postShip(@RequestBody Answer answer){
+    public ResponseEntity<Answer> postAnswer(@RequestBody Answer answer){
         answerRepository.save(answer);
         return new ResponseEntity<>(answer, HttpStatus.CREATED);
     }

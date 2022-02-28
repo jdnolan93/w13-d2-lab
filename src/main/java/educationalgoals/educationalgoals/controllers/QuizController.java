@@ -26,7 +26,7 @@ public class QuizController {
     }
 
     @PostMapping(value = "/quizzes")
-    public ResponseEntity<Quiz> postShip(@RequestBody Quiz quiz){
+    public ResponseEntity<Quiz> postQuiz(@RequestBody Quiz quiz){
         quizRepository.save(quiz);
         return new ResponseEntity<>(quiz, HttpStatus.CREATED);
     }

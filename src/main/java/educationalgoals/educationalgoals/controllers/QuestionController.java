@@ -21,12 +21,12 @@ public class QuestionController {
     }
 
     @GetMapping(value = "/questions/{id}")
-    public ResponseEntity getAnswer(@PathVariable Long id){
+    public ResponseEntity getQuestion(@PathVariable Long id){
         return new ResponseEntity(questionRepository.findById(id), HttpStatus.OK);
     }
 
     @PostMapping(value = "/questions")
-    public ResponseEntity<Question> postShip(@RequestBody Question question){
+    public ResponseEntity<Question> postQuestion(@RequestBody Question question){
         questionRepository.save(question);
         return new ResponseEntity<>(question, HttpStatus.CREATED);
     }
