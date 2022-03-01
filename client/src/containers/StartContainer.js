@@ -26,8 +26,8 @@ const StartContainer = ({playerOne, playerTwo, setPlayerOne, setPlayerTwo}) => {
         <input type = "text" onChange={handleChangePlayerTwo} id = "Player 2 input"/> 
         <h2> This is the carousel </h2> 
         <form>
-            <select>
             <label> Choose Quiz </label>
+            <select>
             <option value = ""> Jamie's Quiz </option>
             <option value = ""> Fraser's Quiz </option>
             <option value = ""> Andrew's Quiz </option>
